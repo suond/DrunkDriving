@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deckControlLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.david.drunkdriving.MainActivity">
+
+    <TextView
+        android:id="@+id/showKingsLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="show kings left"
+        android:textSize="23sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/cardRuleTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp"
+        android:text="apple"
+        android:textSize="23sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/replayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="replaygame"
+        android:text="REPLAY!"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        android:layout_above="@+id/cardRuleTextview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp" />
+
+    <TextView
+        android:id="@+id/ripTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/replayButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:text="RIP"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/deckButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ripTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:onClick="changeCard"
+        app:srcCompat="@drawable/deckfacedown" />
+
+    <ImageView
+        android:id="@+id/currentcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/acespade"
+        android:layout_marginStart="16dp"
+        android:layout_alignTop="@+id/deckButton"
+        android:layout_toEndOf="@+id/deckButton" />
+
+</RelativeLayout>
